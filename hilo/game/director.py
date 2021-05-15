@@ -1,21 +1,21 @@
-from game.shuffler import Shuffle
+from game.shuffler import Shuffler
 
 class Director:
-    """Comment"""
+    """Directs the control of the game"""
 
     def __init__(self):
-        """Comment"""
+        """Variables used"""
 
         self.keep_playing = True
         self.score = 300
         self.old_score = 300
-        self.shuffle = Shuffle()
+        self.shuffle = Shuffler()
         self.green = '\033[92m'
         self.red = '\033[91m'
         self.color_clear = '\033[0m'
 
     def start_game(self):
-        """Comment"""
+        """Starts the game"""
 
         print("Hello welcome to HiLo")
 
@@ -48,7 +48,7 @@ class Director:
         print("Thanks for playing")
     
     def check_score(self):
-        """Comment"""
+        """Checks your score to return a color"""
 
         color_picker = self.red
 
@@ -59,7 +59,7 @@ class Director:
 
         
     def get_inputs(self):
-        """Comment"""
+        """Checks the user input"""
 
         valid_input = True
         while valid_input:
@@ -71,21 +71,21 @@ class Director:
             return self.user_bool(user_input)
     
     def quit(self, user_input):
-        """Comment"""
+        """Quits out of the program"""
 
         if user_input =="q":
             return True
         return False
 
     def check_input(self, user_input):
-        """Comment"""
+        """Checks if input is valid"""
 
         if user_input in {"h", "H", "l", "L"}:
             return True
         return False
     
     def user_bool(self, user_input):
-        """Comment"""
+        """Checks if high or low"""
 
         if user_input in {"h","H"}:
             return True
