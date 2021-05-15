@@ -34,3 +34,9 @@ root                    (project root folder)
 ---
 
 Samuel Witt - wit19011@byui.edu
+
+Michael McFarland
+
+Brandon McFarland
+
+Ashur Ellsworth
